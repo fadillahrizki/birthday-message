@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday</title>
     <link rel="icon" href="love.gif">
+    <link rel="preload" as="image" href="bunga.gif">
+    <link rel="preload" as="image" href="cilukba.gif">
+    <link rel="preload" as="image" href="g5.gif">
+    <link rel="preload" as="image" href="gumush.gif">
+    <link rel="preload" as="image" href="love.gif">
+    <link rel="preload" as="image" href="mndkat.gif">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
         body{
@@ -16,77 +22,78 @@
 <body>
 
     <script>
-        stepper(1)
-        function stepper(step){
-            switch (step) {
-                case 1:
-                    Swal.fire({
-                        title: 'Hai Kamu ❤️',
-                        imageUrl: 'bunga.gif',
-                        imageAlt: 'Bunga',
-                        imageHeight: 100,
-                        timer: 3000,
-                        showConfirmButton: false,
-                        // confirmButtonText:'',
-                        willClose : () => {
-                            stepper(step + 1)
-                        }
-                    })
-                    break;
-                case 2:
-                    Swal.fire({
-                        title: 'Ciyee yang hari ini ultah 🤭',
-                        imageUrl: 'cilukba.gif',
-                        imageAlt: 'cilukba',
-                        imageHeight: 100,
-                        timer: 3000,
-                        showConfirmButton: false,
-                        willClose : () => {
-                            stepper(step + 1)
-                        }
-                    })
-                    break;
-                case 3:
-                    Swal.fire({
-                        title: 'Selamat Ulang Tahun! 🥳',
-                        imageUrl: 'g5.gif',
-                        imageAlt: 'g5',
-                        imageHeight: 100,
-                        timer: 3000,
-                        showConfirmButton: false,
-                        willClose : () => {
-                            stepper(step + 1)
-                        }
-                    })
-                    break;
-                case 4:
-                    Swal.fire({
-                        title: 'Semoga Panjang Umur 🥰',
-                        imageUrl: 'mndkat.gif',
-                        imageAlt: 'mndkat',
-                        imageHeight: 100,
-                        timer: 3000,
-                        showConfirmButton: false,
-                        willClose : () => {
-                            stepper(step + 1)
-                        }
-                    })
-                    break;
-                case 5:
-                    Swal.fire({
-                        title: 'Aku Cuma Pengen Kamu Sehat Selalu 🤩',
-                        imageUrl: 'gumush.gif',
-                        imageAlt: 'gumush',
-                        imageHeight: 100,
-                        timer: 3000,
-                        showConfirmButton: false,
-                        willClose : () => {
-                            stepper(step + 1)
-                        }
-                    })
-                    break;         
-                default:
-                    var text = `
+        window.onload = function(){
+            stepper(1)
+            function stepper(step) {
+                switch (step) {
+                    case 1:
+                        Swal.fire({
+                            title: 'Hai Kamu ❤️',
+                            imageUrl: 'bunga.gif',
+                            imageAlt: 'Bunga',
+                            imageHeight: 100,
+                            // timer: 3000,
+                            // showConfirmButton: false,
+                            confirmButtonText: 'Coba Klik',
+                            willClose: () => {
+                                stepper(step + 1)
+                            }
+                        })
+                        break;
+                    case 2:
+                        Swal.fire({
+                            title: 'Ciyee yang hari ini ultah 🤭',
+                            imageUrl: 'cilukba.gif',
+                            imageAlt: 'cilukba',
+                            imageHeight: 100,
+                            timer: 3000,
+                            showConfirmButton: false,
+                            willClose: () => {
+                                stepper(step + 1)
+                            }
+                        })
+                        break;
+                    case 3:
+                        Swal.fire({
+                            title: 'Selamat Ulang Tahun! 🥳',
+                            imageUrl: 'g5.gif',
+                            imageAlt: 'g5',
+                            imageHeight: 100,
+                            timer: 3000,
+                            showConfirmButton: false,
+                            willClose: () => {
+                                stepper(step + 1)
+                            }
+                        })
+                        break;
+                    case 4:
+                        Swal.fire({
+                            title: 'Semoga Panjang Umur 🥰',
+                            imageUrl: 'mndkat.gif',
+                            imageAlt: 'mndkat',
+                            imageHeight: 100,
+                            timer: 3000,
+                            showConfirmButton: false,
+                            willClose: () => {
+                                stepper(step + 1)
+                            }
+                        })
+                        break;
+                    case 5:
+                        Swal.fire({
+                            title: 'Aku Cuma Pengen Kamu Sehat Selalu 🤩',
+                            imageUrl: 'gumush.gif',
+                            imageAlt: 'gumush',
+                            imageHeight: 100,
+                            timer: 3000,
+                            showConfirmButton: false,
+                            willClose: () => {
+                                stepper(step + 1)
+                            }
+                        })
+                        break;
+                    default:
+                        var text = `
                     <div>
                     I hope your birthday is incredible!
                     <br><br>
@@ -97,16 +104,17 @@
                     I Love You byy💖💐
                     </div>`;
 
-                    Swal.fire({
-                        title: "Happy birthday",
-                        html: text,
-                        imageUrl: 'love.gif',
-                        imageAlt: 'Love',
-                        imageHeight: 100,
-                        showConfirmButton: false,
-                        allowOutsideClick: false
-                    })
-                    break;
+                        Swal.fire({
+                            title: "Happy birthday",
+                            html: text,
+                            imageUrl: 'love.gif',
+                            imageAlt: 'Love',
+                            imageHeight: 100,
+                            showConfirmButton: false,
+                            allowOutsideClick: false
+                        })
+                        break;
+                }
             }
         }
     </script>
