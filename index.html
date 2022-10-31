@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="icon" href="love.gif">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        body{
+            background:#282C34;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        stepper(1)
+        function stepper(step){
+            switch (step) {
+                case 1:
+                    Swal.fire({
+                        title: 'Hai Kamu ❤️',
+                        imageUrl: 'bunga.gif',
+                        imageAlt: 'Bunga',
+                        imageHeight: 100,
+                        timer: 3000,
+                        showConfirmButton: false,
+                        // confirmButtonText:'',
+                        willClose : () => {
+                            stepper(step + 1)
+                        }
+                    })
+                    break;
+                case 2:
+                    Swal.fire({
+                        title: 'Ciyee yang hari ini ultah 🤭',
+                        imageUrl: 'cilukba.gif',
+                        imageAlt: 'cilukba',
+                        imageHeight: 100,
+                        timer: 3000,
+                        showConfirmButton: false,
+                        willClose : () => {
+                            stepper(step + 1)
+                        }
+                    })
+                    break;
+                case 3:
+                    Swal.fire({
+                        title: 'Selamat Ulang Tahun! 🥳',
+                        imageUrl: 'g5.gif',
+                        imageAlt: 'g5',
+                        imageHeight: 100,
+                        timer: 3000,
+                        showConfirmButton: false,
+                        willClose : () => {
+                            stepper(step + 1)
+                        }
+                    })
+                    break;
+                case 4:
+                    Swal.fire({
+                        title: 'Semoga Panjang Umur 🥰',
+                        imageUrl: 'mndkat.gif',
+                        imageAlt: 'mndkat',
+                        imageHeight: 100,
+                        timer: 3000,
+                        showConfirmButton: false,
+                        willClose : () => {
+                            stepper(step + 1)
+                        }
+                    })
+                    break;
+                case 5:
+                    Swal.fire({
+                        title: 'Aku Cuma Pengen Kamu Sehat Selalu 🤩',
+                        imageUrl: 'gumush.gif',
+                        imageAlt: 'gumush',
+                        imageHeight: 100,
+                        timer: 3000,
+                        showConfirmButton: false,
+                        willClose : () => {
+                            stepper(step + 1)
+                        }
+                    })
+                    break;         
+                default:
+                    var text = `
+                    <div>
+                    I hope your birthday is incredible!
+                    <br><br>
+                    Today is just for you and you're special. May this be a very special to honor you and the great things about you - your smile, your laugh, and the way that you're so much fun to be around. You're light in the dark and sunshine on a cloudy day. You make the world a better place just by being in it.
+                    <br><br>
+                    I am the luckiest person on Earth because I have the most wonderful person by my side. Caring, loving, generous, kind, amazing... Words fall short to describe you! Thank you for being my life, Happy Birthday to the 'most perfect girl' ever!
+                    <br><br>
+                    I Love You byy💖💐
+                    </div>`;
+
+                    Swal.fire({
+                        title: "Happy birthday",
+                        html: text,
+                        imageUrl: 'love.gif',
+                        imageAlt: 'Love',
+                        imageHeight: 100,
+                        showConfirmButton: false,
+                        allowOutsideClick: false
+                    })
+                    break;
+            }
+        }
+    </script>
+    
+</body>
+</html>
